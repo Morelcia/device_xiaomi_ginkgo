@@ -52,12 +52,12 @@ void property_override(string prop, string value)
 void vendor_load_properties()
 {
     string device, model, desc;
-    string fp = "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys";
+    string fp = "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys";
 
-    string device_region = GetProperty("ro.boot.hwc", "");
-    string device_hwversion = GetProperty("ro.boot.hwversion", "");
+    string region = GetProperty("ro.boot.hwc", "");
+    string hwversion = GetProperty("ro.boot.hwversion", "");
 
-    if (device_region == "Global_B" && device_hwversion == "18.39.0") {
+    if (region == "Global_B" && (hwversion == "18.39.0" || hwversion == "19.39.0")) {
         device = "willow";
         model = "Redmi Note 8T";
     } else {
