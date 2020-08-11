@@ -70,7 +70,8 @@ PRODUCT_COPY_FILES += \
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
-    fs_config_files
+    fs_config_files \
+    NotchBarKiller
 
 # ANT+
 PRODUCT_PACKAGES += \
